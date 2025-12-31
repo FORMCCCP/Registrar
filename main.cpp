@@ -16,10 +16,8 @@ import std;
 int main()
 {
     // alias for static function Registrar::singleton
+    Registrar::singleton().initialize();
     auto system = &Registrar::singleton;
-
-    system().initialize();
-
     // Simulate some students erolls in some courses
     system().studentEnrollsInCourse("S001", "CS101");
     system().studentEnrollsInCourse("S001", "CS201");
