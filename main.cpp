@@ -18,6 +18,8 @@ int main()
     // alias for static function Registrar::singleton
     Registrar::singleton().initialize();
     auto system = &Registrar::singleton;
+
+
     // Simulate some students erolls in some courses
     system().studentEnrollsInCourse("S001", "CS101");
     system().studentEnrollsInCourse("S001", "CS201");
@@ -42,8 +44,6 @@ int main()
     system().courseRoster("MATH101");
 
     system().studentSchedule("S001");
-
-    system().studentSchedule("S003");
 
     return 0;
 }
